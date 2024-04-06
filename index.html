@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies Landing Page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="quoteContainer">
+        <div class="quoteBg">
+          <div class="quoteText"></div>
+          <button class="btn">Get another quote</button>
+        </div>
+      </div>
+      <div class="formContainer">
+        <form id="addMovieForm">
+          <label for="title">Title:</label><br />
+          <input type="text" id="title" name="title" maxlength="250" /><br />
+          <div id="titleError" class="error"></div>
+          <label for="date">Date (YYYY-MM-DD):</label><br />
+          <input type="text" id="date" name="date" /><br />
+          <div id="dateError" class="error"></div>
+          <label for="description">Description:</label><br />
+          <textarea
+            id="description"
+            name="description"
+            maxlength="500"
+          ></textarea
+          ><br />
+          <div id="descriptionError" class="error"></div>
+          <button type="submit">Add Movie</button>
+        </form>
+        <div id="movieList"></div>
+      </div>
+      <div class="genreFilter">
+        <label for="genreSelect">Filter results by: </label>
+        <select id="genreSelect">
+          <option value="">All Genres</option>
+          <option value="Drama">Drama</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Family">Family</option>
+          <option value="Crime">Crime</option>
+          <option value="Action">Action</option>
+          <option value="Thriller">Thriller</option>
+        </select>
+      </div>
+      <div id="movieContainer"></div>
+      <div id="movieModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <p id="modalYear"></p>
+          <p id="modalGenre"></p>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </main>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
